@@ -1,13 +1,13 @@
 *,
 *::before,
 *::after {
-    /* outline: 1px solid #11111117; */
+    outline: 1px solid #11111117;
     box-sizing: border-box;
 }
 
 body {
     font-family: "Noto Sans", sans-serif;
-    min-width: 367px;
+    /* min-width: 367px; */
 }
 
 .wrap {
@@ -251,20 +251,23 @@ body {
 
 
 .box-b {
-    width: 636px;
+    width: 100%;
+    max-width: 636px;
     height: 84px;
     display: flex;
 }
 
 .box-l {
+    width: 100%;
     height: 84px;
-    width: 298px;
+    max-width: 298px;
     margin-right: 40px;
 }
 
 .box-r {
+    width: 100%;
     height: 84px;
-    width: 298px;
+    max-width: 298px;
 }
 
 .box-l h4,
@@ -417,9 +420,11 @@ body {
 }
 
 .tag-list {
+    /* width: auto; */
     height: 32px;
     display: flex;
     padding-left: 16px;
+    padding-right: 16px;
 }
 
 .tag-list li {
@@ -490,6 +495,7 @@ body {
 
 .footer .wrap {
     z-index: 20;
+    width: 100%;
     width: 1296px;
     display: flex;
     justify-content: space-between;
@@ -513,14 +519,15 @@ body {
     }
 
     .footer-bl {
-        width: 350px !important;
+        width: 100%;
+        max-width: 350px !important;
         margin-bottom: 40px;
         margin-top: 40px;
         text-align: center;
     }
 
     .logo-b img {
-        margin-left: 115px;
+        margin: auto;
     }
 
     .footer-br {
@@ -529,8 +536,10 @@ body {
 }
 
 .footer-bl {
-    width: 686px;
+    width: 100%;
+    max-width: 686px;    
     height: 186px;
+    height: auto;
 }
 
 .logo-b img {
@@ -547,6 +556,7 @@ body {
 }
 
 .footer-bl p {
+    
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
@@ -554,12 +564,14 @@ body {
 }
 
 .footer-br {
-    width: 306px;
+    width: 100%;
+    max-width: 306px;
     height: 264px;
 }
 
 .footer-brbtn {
-    width: 306px;
+    width: 100%;
+    max-width: 306px;
     height: 72px;
     margin-bottom: 24px;
     display: flex;
@@ -569,9 +581,11 @@ body {
     border-radius: 8px;
     border: 1px solid rgba(193, 193, 193, 1);
     color: rgba(59, 59, 59, 1);
+    
 }
 
 .footer-brbtn p {
+    
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -589,4 +603,16 @@ body {
     margin-right: 8px;
 }
 
+
+.footer-bl h2,
+.footer-bl p,
+.footer-br p {
+    /* width: 70%; */
+    word-wrap: break-word; /* Allow the text to wrap onto the next line */
+}
+
+.footer-bl p,
+.footer-br p {
+    width: 70%;
+}
 /* footer 結束 */
